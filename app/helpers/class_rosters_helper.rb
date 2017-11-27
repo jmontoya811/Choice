@@ -1,0 +1,2 @@
+module ClassRostersHelper
+end

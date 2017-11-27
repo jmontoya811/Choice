@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @class_roster.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @class_roster.subtitle %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @class_roster.count %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @class_roster.description %>
+</p>
+
+<%= link_to 'Edit', edit_class_roster_path(@class_roster) %> |
+<%= link_to 'Back', class_rosters_path %>

@@ -1,9 +1,17 @@
 <h1>Choice Preschool</h1>
+<hr>
 <h2>Hi, <%= current_user.first_name if current_user %></h2>
-<p>Find me in app/views/pages/home.html.erb</p>
+<p>Find a class and sign your student up here</p>
+<br>
 
-<h1>Blog Posts</h1>
+<p>Class Schedule: Tuesday's and Thursday's weekly, Morning Class: 9:00 AM to 12:00 PM, Afternoon Class: 1:00 PM to 4:00 PM</p>
+
+<%= link_to "CHOICE | Registration", posts_path %>
+<hr>
+<h2>Blog Posts</h2>
 <%= @posts.inspect %>
+<hr>
+<%= link_to "CHOICE | Class of 2018", class_rosters_path %>
+<h3>Class Capacity: 12</h3>
 
-<h1>Class Capacity: 12</h1>
 <%= @skills.inspect %>
