@@ -14,4 +14,5 @@ puts "10 blogs created"
 
 2.times do |skills|
     Skill.create!(title: "Afternoon Class", percent_utilized: "60")
+    Skill.create!(title: "Morning Class", percent_utilized: "100")
 end

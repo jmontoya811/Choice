@@ -18,3 +18,5 @@ School website for Choice Preschool:
 *contact info about me page        
 
 *portfolio to showcase student projects etc
+
+*Curriculum**
