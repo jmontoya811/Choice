@@ -3,17 +3,17 @@
 
 School website for Choice Preschool:
 
-*Admin(teacher) / Other Users(Parents)
+*Admin(teacher) / Other Users(Parents) - Done
 
-*Schedule and class times + other details
+*Schedule and class times + other details - Done
 
-*Ability to register for classes
+*Ability to register for classes - Done
 
 *Ability to pay tuition online**
 
 *Messaging system to contact teacher 
 
-*Blog for day to day, subject overviews, schedules
+*Blog for day to day, subject overviews, schedules - Done
 
 *contact info about me page        
 
