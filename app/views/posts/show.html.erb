@@ -20,5 +20,10 @@
   <%= @post.body %>
 </p>
 
+<p>
+  <strong>Class desired:</strong>
+  <%= @post.class_desired %>
+</p>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

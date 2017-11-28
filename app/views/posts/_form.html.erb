@@ -27,9 +27,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label :class_desired %>
+    <%= form.select :class_desired, ['Morning', 'Afternoon'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :class_desired_because %>
     <%= form.text_area :body, id: :post_body %>
   </div>
+  
 
   <div class="actions">
     <%= form.submit %>
