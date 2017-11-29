@@ -27,7 +27,7 @@
         <td><%= post.class_desired %></td>
         <td><%= link_to post.status, toggle_status_post_path(post) %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) if logged_in?(:admin) %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
       </tr>
     <% end %>
@@ -36,5 +36,5 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path if logged_in?(:admin) %>
+<%= link_to 'New Post', new_post_path %>
 <%= link_to 'Back', root_path %>

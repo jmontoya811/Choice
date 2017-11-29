@@ -21,8 +21,8 @@
         <td><%= class_roster.count %></td>
         <td><%= class_roster.description %></td>
         <td><%= link_to 'Show', class_roster %></td>
-        <td><%= link_to 'Edit', edit_class_roster_path(class_roster) %></td>
-        <td><%= link_to 'Destroy', class_roster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_class_roster_path(class_roster) if logged_in?(:admin) %></td>
+        <td><%= link_to 'Destroy', class_roster, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Class Roster', new_class_roster_path %>
+<%= link_to 'New Class Roster', new_class_roster_path if logged_in?(:admin) %>
