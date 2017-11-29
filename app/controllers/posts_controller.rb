@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status]
   access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
 
   # GET /posts
@@ -45,6 +45,15 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_url, notice: 'Post was successfully destroyed.'
   end
+
+  def toggle_status
+    if @post.pending?
+      @post.approved!
+    elsif @post.approved?
+      @post.pending!
+    end 
+    redirect_to posts_url, notice: 'Post has been updated'
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
