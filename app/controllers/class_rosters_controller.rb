@@ -49,7 +49,7 @@ class ClassRostersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_class_roster
-      @class_roster = ClassRoster.find(params[:id])
+      @class_roster = ClassRoster.friendly.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

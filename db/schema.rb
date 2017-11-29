@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129205817) do
+ActiveRecord::Schema.define(version: 20171129214053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 20171129205817) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.integer "status", default: 0
+    t.index ["slug"], name: "index_class_rosters_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
