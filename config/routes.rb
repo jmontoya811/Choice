@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :class_rosters
+  resources :class_rosters do
+    member do 
+      get :toggle_status
+    end 
+  end
   resources :posts do 
     member do 
       get :toggle_status

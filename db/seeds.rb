@@ -9,7 +9,7 @@ User.create!(name:"Test Choice",
  email:'test@choice.com',
  password:"asdf123", 
  password_confirmation:"asdf123",
- roles:'site_admin'
+ roles: "admin"
  )
 
 User.create!(
@@ -83,11 +83,13 @@ puts "12 Posts created"
 ClassRoster.create!(title: "Morning Class",
 subtitle: "Schedule: 9:15-11:45",
 count: "12",
-description: "Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith")
+description: "Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith",
+status: "Morning")
 
 ClassRoster.create!(title: "Afternoon Class",
 subtitle: "Schedule: 12:30-3:00",
 count: "12",
-description: "Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith")
+description: "Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith",
+status: "Afternoon")
 
 puts "2 classes created morn/aft"

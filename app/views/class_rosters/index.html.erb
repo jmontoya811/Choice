@@ -5,21 +5,23 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Class Time</th>
       <th>Schedule</th>
       <th>Headcount</th>
       <th>Students</th>
-      <th colspan="3"></th>
+      <th>Roster</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @class_rosters.each do |class_roster| %>
       <tr>
-        <td><%= class_roster.title %></td>
+        <td><%= link_to class_roster.status, toggle_status_class_roster_path(class_roster) %></td>
         <td><%= class_roster.subtitle %></td>
         <td><%= class_roster.count %></td>
         <td><%= class_roster.description %></td>
+        <td><%= class_roster.title %></td>
         <td><%= link_to 'Show', class_roster %></td>
         <td><%= link_to 'Edit', edit_class_roster_path(class_roster) if logged_in?(:admin) %></td>
         <td><%= link_to 'Destroy', class_roster, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>

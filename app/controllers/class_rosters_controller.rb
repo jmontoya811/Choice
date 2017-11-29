@@ -1,5 +1,5 @@
 class ClassRostersController < ApplicationController
-  before_action :set_class_roster, only: [:show, :edit, :update, :destroy]
+  before_action :set_class_roster, only: [:show, :edit, :update, :destroy, :toggle_status]
   access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
 
   # GET /class_rosters
@@ -44,6 +44,15 @@ class ClassRostersController < ApplicationController
   def destroy
     @class_roster.destroy
     redirect_to class_rosters_url, notice: 'Class roster was successfully destroyed.'
+  end
+
+  def toggle_status
+    if @class_roster.Morning?
+      @class_roster.Afternoon!
+    elsif @class_roster.Afternoon?
+      @class_roster.Morning!
+    end
+    redirect_to class_rosters_url, notice: 'Class has been updated'
   end
 
   private
