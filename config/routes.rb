@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   end
 
   resources :charges, only: [:new, :create]
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
 
   root to: 'pages#home'
 end
