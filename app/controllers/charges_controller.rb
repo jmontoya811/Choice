@@ -7,8 +7,6 @@ class ChargesController < ApplicationController
     end
 
     def create
-    @amount = 500
-
     customer = StripeTool.create_customer(email: params[:stripeEmail], 
                                           stripe_token: params[:stripeToken])
 
