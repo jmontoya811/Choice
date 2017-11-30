@@ -54,3 +54,5 @@ gem 'devise', '~> 4.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'stripe', '~> 3.8'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
