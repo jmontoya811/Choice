@@ -24,6 +24,9 @@ module ApplicationHelper
 				url: blogs_path,
 				title: '<i class="material-icons" style="font-size: 3em;">group_work</i>'
 				},{
+				url: posts_path,
+				title: '<i class="material-icons" style="font-size: 3em;">person_add</i>'
+				},{
 				url: portfolios_path,
 				title: '<i class="material-icons" style="font-size: 4em;">panorama</i>'
 				},{
