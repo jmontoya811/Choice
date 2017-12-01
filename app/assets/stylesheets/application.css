@@ -12,8 +12,18 @@
  *
  *= require_tree .
  *= require_self
+
  @import "jquery-ui";
  */
  /*
  *= require jquery-ui
  */
+.navbar-custom {
+    float: right;
+}
+
+.nav-link {
+    display: table-row;
+    direction: ltr;
+    size
+}

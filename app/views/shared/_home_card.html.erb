@@ -3,12 +3,19 @@
       <img class="activator" src=" ">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Find a a class<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4">
+
+Find a a class<i class="material-icons right">more_vert</i></span>
       <p><%= link_to "CHOICE | Registration", posts_path %></p>
+      <p><%= link_to "CHOICE | Class of 2018", class_rosters_path %></p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Schedule<i class="material-icons right">close</i></span>
       <p>Class Times: Tuesday's and Thursday's weekly, Morning Class: 9:15 AM to 11:45 PM, Afternoon Class: 12:30 PM to 3:00 PM</p>
+      
+      <h4>Class Capacity: 12</h4>
+      <hr>
+      <%= @skills.inspect %>
     </div>
   </div>
 
@@ -18,10 +25,12 @@
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Explore curriculum<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <p><a href="blogs">Blogs</a></p>
+      <p><a href="portfolios">Portfolios</a></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Schedule<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4">Day to day curriculum<i class="material-icons right">close</i></span>
+      <p>Here is some more information about the teacher and her methods.</p>
+    <%= link_to "CHOICE | About", about_path %>
     </div>
   </div>

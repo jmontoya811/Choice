@@ -1,6 +1,7 @@
 class ClassRostersController < ApplicationController
   before_action :set_class_roster, only: [:show, :edit, :update, :destroy, :toggle_status]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, admin: :all
 
   # GET /class_rosters
   def index
@@ -47,10 +48,10 @@ class ClassRostersController < ApplicationController
   end
 
   def toggle_status
-    if @class_roster.Morning?
-      @class_roster.Afternoon!
-    elsif @class_roster.Afternoon?
-      @class_roster.Morning!
+    if @class_roster.Active?
+      @class_roster.Inactive!
+    elsif @class_roster.Active?
+      @class_roster.Inactive!
     end
     redirect_to class_rosters_url, notice: 'Class has been updated'
   end

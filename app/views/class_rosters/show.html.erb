@@ -20,5 +20,5 @@
   <%= @class_roster.description %>
 </p>
 
-<%= link_to 'Edit', edit_class_roster_path(@class_roster) %> |
+<%= link_to 'Edit', edit_class_roster_path(@class_roster) if logged_in?(:admin) %> |
 <%= link_to 'Back', class_rosters_path %>
