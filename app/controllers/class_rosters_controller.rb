@@ -1,5 +1,6 @@
 class ClassRostersController < ApplicationController
   before_action :set_class_roster, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :authenticate_user!
   
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, admin: :all
 
@@ -50,8 +51,8 @@ class ClassRostersController < ApplicationController
   def toggle_status
     if @class_roster.Active?
       @class_roster.Inactive!
-    elsif @class_roster.Active?
-      @class_roster.Inactive!
+    elsif @class_roster.Inactive?
+      @class_roster.Active!
     end
     redirect_to class_rosters_url, notice: 'Class has been updated'
   end

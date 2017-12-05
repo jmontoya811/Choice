@@ -20,5 +20,12 @@
   <%= @class_roster.description %>
 </p>
 
+<p>
+  <strong>Status:</strong>
+  <%= link_to @class_roster.status, toggle_status_class_roster_path(@class_roster) %>
+</p>
+
 <%= link_to 'Edit', edit_class_roster_path(@class_roster) if logged_in?(:admin) %> |
 <%= link_to 'Back', class_rosters_path %>
+
+<%= render 'stationary' if logged_in?(:admin) %>

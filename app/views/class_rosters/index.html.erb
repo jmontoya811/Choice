@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Class Rosters</h1>
+<h1>Daily Schedules</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Class</th>
       <th>Session</th>
       <th>Schedule</th>
       <th>Headcount</th>
       <th>Students</th>
-      <th>Class</th>
       <th colspan="5"></th>
     </tr>
   </thead>
@@ -17,19 +17,19 @@
   <tbody>
     <% @class_rosters.each do |class_roster| %>
       <tr>
+        <td><%= class_roster.title %></td>
         <td><%= link_to class_roster.status, toggle_status_class_roster_path(class_roster) %></td>
         <td><%= class_roster.subtitle %></td>
         <td><%= class_roster.count %></td>
         <td><%= class_roster.description %></td>
-        <td><%= class_roster.title %></td>
         <td><%= link_to 'Show', class_roster %></td>
         <td><%= link_to 'Edit', edit_class_roster_path(class_roster) if logged_in?(:admin) %></td>
         <td><%= link_to 'Destroy', class_roster, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
       </tr>
+      
     <% end %>
   </tbody>
 </table>
+<hr>
 
-<br>
-
-<%= link_to 'New Class Roster', new_class_roster_path if logged_in?(:admin) %>
+<a class="btn-floating btn-large waves-effect waves-light red" href="/class_rosters/new"><i class="material-icons">add</i></a></a>

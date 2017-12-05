@@ -63,7 +63,7 @@ puts "9 portfolio items created"
     name: "Choice Test",
     title: "Choice Posts",
     age: "3",
-    class_desired: "Morning",
+    class_desired: "morning",
     body: "Best Time for Me"
  )
 end 
@@ -73,7 +73,7 @@ end
     name: "Choice Test",
     title: "Choice Posts",
     age: "3",
-    class_desired: "Afternoon",
+    class_desired: "afternoon",
     body: "Best Time for Me"
  )
 end

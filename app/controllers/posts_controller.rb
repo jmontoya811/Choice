@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :authenticate_user!
   access all: [:show, :index, :new, :create], user: {except: [:destroy, :update, :edit, :toggle_status]}, admin: :all
 
   # GET /posts
