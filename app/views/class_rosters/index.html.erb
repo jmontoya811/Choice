@@ -22,8 +22,9 @@
         <td><%= class_roster.subtitle %></td>
         <td><%= class_roster.count %></td>
         <td><%= class_roster.description %></td>
-        <td><%= link_to 'Show', class_roster %></td>
-        <td><%= link_to 'Edit', edit_class_roster_path(class_roster) if logged_in?(:admin) %></td>
+        <td><%= link_to(edit_class_roster_path(class_roster), :id => :class_roster, class: "btn-floating yellow darken-1") do %>
+              <i class='material-icons'>edit</i><% end %></td>
+        <td><%= link_to(class_roster_path(class_roster), :id => :class_roster, class: "btn-floating green") do %><i class="material-icons">assignment_return</i><% end %></td>
         <td><%= link_to 'Destroy', class_roster, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
       </tr>
       

@@ -26,8 +26,9 @@
         <td><%= post.body %></td>
         <td><%= post.class_desired %></td>
         <td><%= link_to post.status, toggle_status_post_path(post) %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to(edit_post_path(post), :id => :post, class: "btn-floating yellow darken-1") do %>
+              <i class='material-icons'>edit</i><% end %></td>
+        <td><%= link_to(post_path(post), :id => :post, class: "btn-floating green") do %><i class="material-icons">assignment_return</i><% end %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
       </tr>
     <% end %>
@@ -35,6 +36,6 @@
 </table>
 
 <br>
-<a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">add</i></a></a>
+<a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">class</i></a></a>
 
 <%= link_to 'Back', root_path %>
