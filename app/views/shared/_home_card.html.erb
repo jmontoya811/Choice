@@ -7,8 +7,13 @@
       <span class="card-title activator grey-text text-darken-4">
 
 Find a a class, click for schedules<i class="material-icons right">chevron_left</i></span>
-      <p><%= link_to "CHOICE | Registration", posts_path %></p>
-      <p><%= link_to "CHOICE | Class of 2018", class_rosters_path %></p>
+      <p><%= link_to "Registration", posts_path %></p>
+      
+      <p><a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">class</i></a>
+      </p>
+      <p><%= link_to "Class of 2018", class_rosters_path %></p>
+      <p><a class="btn-floating btn-large waves-effect waves-light red" href="/class_rosters/new"><i class="material-icons">description</i></a>
+      </p>
     </div>
   </div>
     <div class="card-reveal green lighten-1">
@@ -29,7 +34,12 @@ Find a a class, click for schedules<i class="material-icons right">chevron_left<
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Explore curriculum<i class="material-icons right">more_vert</i></span>
-      <p><a href="blogs">Blogs</a></p>
+      <p>Blogs</p>
+      <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/blogs"><i class="material-icons">add_box</i></a>
+      </p>
+      <br>
+      <p><a class="btn-floating btn-large waves-effect waves-light green" href="/portfolios"><i class="material-icons">brush</i></a>
+      </p>
       <p><a href="portfolios">Portfolios</a></p>
     </div>
   </div>
