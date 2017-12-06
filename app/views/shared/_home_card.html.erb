@@ -1,33 +1,44 @@
 <div class="card green lighten-2">
   <div class="row">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src=" ">
+        <img class="activator" src=" ">
     </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">
-
-Find a a class, click for schedules<i class="material-icons right">chevron_left</i></span>
-      <p><%= link_to "Registration", posts_path %></p>
-      
-      <p><a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">class</i></a>
-      </p>
-      <p><%= link_to "Class of 2018", class_rosters_path %></p>
-      <p><a class="btn-floating btn-large waves-effect waves-light red" href="/class_rosters/new"><i class="material-icons">description</i></a>
-      </p>
-    </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+            Find a a class, click for schedules<i class="material-icons right">chevron_left</i></span>
+        <p><%= link_to "Registration", posts_path %></p>
+        <p><a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">class</i></a>
+        </p>
+        <p><%= link_to "Class of 2018", class_rosters_path %></p>
+        <p><a class="btn-floating btn-large waves-effect waves-light red" href="/class_rosters/new"><i class="material-icons">description</i></a>
+        </p>
+      </div>
   </div>
-    <div class="card-reveal green lighten-1">
+  <div class="card-reveal green lighten-1">
       <span class="card-title grey-text text-darken-1">Schedule<i class="material-icons right">close</i></span>
       <p>Class Times: Tuesday's and Thursday's weekly, Morning Class: 9:15 AM to 11:45 PM, Afternoon Class: 12:30 PM to 3:00 PM</p>
       
       <h4>Class Capacity: 12</h4>
       <hr>
-      <%= @skills.inspect %>
-    </div>
+
+        <div class="container">
+          <div class="skills">
+              <% @skills.each do |skill| %>
+            <div class="skill"><%= skill.title %><p>Class Capacity: <%= skill.percent_utilized %>%</p>
+              <div class="progress">
+                <div class="determinate" role="progress" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%">
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
   </div>
+</div>
 
 
-  <div class="card green lighten-1">
+<div class="card green lighten-1">
   <div class="row">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="images/github1.png">
@@ -38,14 +49,16 @@ Find a a class, click for schedules<i class="material-icons right">chevron_left<
       <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/blogs"><i class="material-icons">add_box</i></a>
       </p>
       <br>
+      <p>Portfolios</p>
       <p><a class="btn-floating btn-large waves-effect waves-light green" href="/portfolios"><i class="material-icons">brush</i></a>
       </p>
-      <p><a href="portfolios">Portfolios</a></p>
     </div>
   </div>
-    <div class="card-reveal green lighten-3">
+  <div class="card-reveal green lighten-3">
       <span class="card-title grey-text text-darken-4">Day to day curriculum<i class="material-icons right">close</i></span>
       <p>Here is some more information about the teacher and her methods.</p>
-    <%= link_to "CHOICE | About", about_path %>
-    </div>
+    <%= link_to "About the teacher", about_path %>
+    <br>
+    <%= link_to "Contact The Learning Center", contact_path %>
   </div>
+</div>
