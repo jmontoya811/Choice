@@ -3,16 +3,25 @@
     <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src=" ">
     </div>
-      <div class="card-content">
+    <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">
             Find a a class, click for schedules<i class="material-icons right">chevron_left</i></span>
+      <div class="col s3">
         <p><%= link_to "Registration", posts_path %></p>
         <p><a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">class</i></a>
         </p>
+      </div>
+      <div class="col s3">
         <p><%= link_to "Class of 2018", class_rosters_path %></p>
-        <p><a class="btn-floating btn-large waves-effect waves-light red" href="/class_rosters/new"><i class="material-icons">description</i></a>
+        <p><a class="btn-floating btn-large waves-effect waves-light blue" href="/class_rosters/new"><i class="material-icons">description</i></a>
         </p>
       </div>
+      <div class="col s3">
+        <p><%= link_to "Payments", deposit_index_path %></p>
+        <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/deposit"><i class="material-icons">account_balance</i></a>
+        </p>
+      </div>
+    </div>
   </div>
   <div class="card-reveal green lighten-1">
       <span class="card-title grey-text text-darken-1">Schedule<i class="material-icons right">close</i></span>
@@ -45,20 +54,47 @@
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Explore curriculum<i class="material-icons right">more_vert</i></span>
+    <div class="col s3">
       <p>Blogs</p>
       <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/blogs"><i class="material-icons">add_box</i></a>
       </p>
-      <br>
+    </div>
+    <div class="col s3">
+        <p><%= link_to "Payments", deposit_index_path %></p>
+        <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/deposit"><i class="material-icons">account_balance</i></a>
+        </p>
+      </div>
+    <div class="col s3">
       <p>Portfolios</p>
       <p><a class="btn-floating btn-large waves-effect waves-light green" href="/portfolios"><i class="material-icons">brush</i></a>
       </p>
     </div>
+    </div>
   </div>
   <div class="card-reveal green lighten-3">
-      <span class="card-title grey-text text-darken-4">Day to day curriculum<i class="material-icons right">close</i></span>
-      <p>Here is some more information about the teacher and her methods.</p>
-    <%= link_to "About the teacher", about_path %>
+      <span class="card-title grey-text text-darken-4">Day to Day & Curriculum<i class="material-icons right">close</i></span>
+      <p>Here is some more information about the teacher and her contact info.</p>
+      <%= link_to "About the teacher", about_path %> | <%= link_to "Contact The Learning Center", contact_path %>
+      <p>Yearly theme: This year our theme is Dr. Seuss and we will have an amazing year!</p>
+    
     <br>
-    <%= link_to "Contact The Learning Center", contact_path %>
+    
+<p>Literacy: Literacy is very important for preschoolers! Instead of “learning how to read” we lay the foundation for learning how to read by learning letters, sounds, rhymes, songs, playing games, practicing coordination and reading books together. You can also promote this at home by reading to your child every day! I will send home a reading log and if you read with your child each day, fill out the log and bring it back, your child will get a book each month!</p>
+<p>Environmental print: Some months we will have an environmental print item that I will ask you to send with your child. We will do songs or activities with each one. Watch the calendar for these!</p>
+<p>Play: Young children learn through play! Play is a very important part of childhood and preschool is the last opportunity your child will have to play for an adequate time in school. It is a very important part of my curriculum. </p>
+<p>Discipline: Each child is expected to follow the basic rules of preschool: being a friend, listening, sharing, cleaning up and following directions. We practice these a lot in preschool. I use positive discipline strategies by setting high expectation paired with high levels of praise. If a child’s behavior is an excessive problem in the classroom, I will discuss the issues with parents and if the problem continues, the child will be dismissed from preschool.</p>
+<p>Backpacks: Your child works hard on art projects, etc. in class and these will not fit into a “mini” backpack. Please send your child with a regular backpack or an open top bag for their papers.</p>
+<p>Dress: Preschool can be kind of messy, so I recommend that you NOT send your child in their best clothes. We paint and do all sorts of projects, most of which use washable materials, but some do not. We try to stay clean but, sometimes, stains just happen!</p>
+<p>Illness: Because this is probably your child’s first experience outside of home, you may find that they get sick more easily. I do everything I possibly can to prevent this, but the fact is that kids spread germs and illness. We wash hands and Clorox wipe surfaces often. If your child is ill, please keep them home. Help them get used to washing their hands often and coughing or sneezing into their sleeve. If they contract a contagious disease such as the chicken pox or strep throat, please let me know so I can inform other parents.</p>
+<p>Class Help: I offer tuition credit for class helpers! If you come once, you may take off $5, if you come in twice, you may take off $10 from the next month’s tuition. You may stay the whole preschool time, or you may come for the last half of preschool (This is 10:30-11:45 or 1:45-3:00). And my door is always open!</p>
+<p>Field trips: We take several field trips during the year and I must have parent helpers/drivers. There will be a sign-up sheet at the front door for field trip helpers before each trip. Some field trips are free, others will be $1- 3.00 and I make up the difference.</p>
+<p>Snacks: You will be asked to help out with snack regularly throughout the year. Children love when it is their turn. This does not have to be fancy. Simple is better. Some ideas might be: apple slices, crackers & cheese, pretzels, granola bars, frozen Gogurt, etc. Please avoid cupcakes or really sugary snacks. A drink is optional but not necessary as we always have water!</p>
+<p>VIP: Each child will have their turn to be our “Horton’s Hero”. I will send a note home letting you know when it is your child’s turn!</p>
+<p>Calendars: I will send home a bi-monthly calendar that lets you know what we will be learning about each day, when there is no preschool because of Holidays, when there are field trips and when your child has snack. Put them somewhere handy as a reference and if you misplace it, I always have extras! I also email calendars and will ask for your email at open house.</p>
+<p>Drop-off/pick-up: Please be prompt in dropping off and picking up your child. With two classes, I would like to have lunch in between. I also have obligations after school. I will wait downstairs for children to come in and we will come outside when preschool is finished.</p>
+<p>My dog: I have a dog named Bella. She is friendly but she barks. She will be in her kennel during preschool hours but you will still hear her barking!</p>
+<p>If you have any questions, please let me know!</p>
+<p>Miss Betsy      801- 754-1399,  cell 385-208-3085</p>
+
   </div>
 </div>

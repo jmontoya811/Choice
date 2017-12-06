@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status]
-  access all: [:show, :index, :new, :create], user: {except: [:destroy, :update, :edit, :toggle_status]}, admin: :all
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status, :timeslot]
+  access all: [:show, :index, :new, :create], user: {except: [:destroy, :update, :edit, :toggle_status, :timeslot]}, admin: :all
 
   # GET /posts
   def index
@@ -68,6 +68,6 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:title, :name, :age, :body, :class_desired)
+      params.require(:post).permit(:title, :name, :age, :body, :class_desired, :timeslot)
     end
 end
