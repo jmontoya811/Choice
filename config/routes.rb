@@ -7,9 +7,11 @@ Rails.application.routes.draw do
       get :toggle_status
     end 
   end
+
   resources :posts do 
     member do 
       get :toggle_status
+      get :toggle_timeslot
     end 
   end 
   resources :portfolios, except: [:show]

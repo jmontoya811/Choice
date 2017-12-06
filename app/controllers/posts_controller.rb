@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status, :timeslot]
-  access all: [:show, :index, :new, :create], user: {except: [:destroy, :update, :edit, :toggle_status, :timeslot]}, admin: :all
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status, :toggle_timeslot]
+  access all: [:show, :index, :new, :create], user: {except: [:destroy, :update, :edit, :toggle_status, :toggle_timeslot]}, admin: :all
 
   # GET /posts
   def index
@@ -59,6 +59,15 @@ class PostsController < ApplicationController
     end 
     redirect_to posts_url, notice: 'Post has been updated'
   end 
+  
+  def toggle_timeslot
+    if @post.morning?
+      @post.afternoon!
+    elsif @post.afternoon?
+      @post.morning!
+    end 
+    redirect_to posts_url, notice: 'Post has been updated'
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -68,6 +77,6 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:title, :name, :age, :body, :class_desired, :timeslot)
+      params.require(:post).permit(:title, :name, :age, :body, :class_desired)
     end
 end
