@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+
   resources :class_rosters do
     member do 
       get :toggle_status
@@ -25,6 +27,10 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
   get 'thanks', to: 'charges#thanks', as: 'thanks'
+
+  resources :deposit, only: [:new, :create, :index]
+
+  get 'thank_you', to: 'deposit#thank_you', as: 'thank_you'
 
   root to: 'pages#home'
 end

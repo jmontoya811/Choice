@@ -5,4 +5,5 @@ class ClassRoster < ApplicationRecord
    validates_presence_of :title, :subtitle, :count, :description
 
    has_many :posts
+
 end
