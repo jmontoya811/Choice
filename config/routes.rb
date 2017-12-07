@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  
-
   resources :class_rosters do
     member do 
       get :toggle_status
@@ -21,6 +19,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
   get 'schedule', to: 'pages#schedule'
+  get 'payments', to: 'pages#payments'
 
   resources :blogs do 
     member do 
@@ -31,8 +30,8 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   get 'thanks', to: 'charges#thanks', as: 'thanks'
 
-  resources :deposit, only: [:new, :create, :index]
-  post 'create', to: 'deposit#create', as: 'create'
+  resources :deposit, only: [:new, :create]
+  
   get 'thank_you', to: 'deposit#thank_you', as: 'thank_you'
 
   root to: 'pages#home'
