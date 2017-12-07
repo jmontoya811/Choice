@@ -1,11 +1,12 @@
-<div class="card green lighten-2">
+<div class="card amber accent-3">
   <div class="row">
     <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src=" ">
     </div>
     <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">
-            Find a a class, click for schedules<i class="material-icons right">chevron_left</i></span>
+            Find a a class, click for schedules and availability<i class="material-icons right">chevron_left</i></span>
+            <hr>
       <div class="col s3">
         <p><%= link_to "Registration", posts_path %></p>
         <p><a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">class</i></a>
@@ -13,17 +14,17 @@
       </div>
       <div class="col s3">
         <p><%= link_to "Class of 2018", class_rosters_path %></p>
-        <p><a class="btn-floating btn-large waves-effect waves-light blue" href="/class_rosters/new"><i class="material-icons">description</i></a>
+        <p><a class="btn-floating btn-large waves-effect waves-light cyan darken-3" href="/class_rosters/new"><i class="material-icons">description</i></a>
         </p>
       </div>
       <div class="col s3">
         <p><%= link_to "Payments", deposit_index_path %></p>
-        <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/deposit"><i class="material-icons">account_balance</i></a>
+        <p><a class="btn-floating btn-large waves-effect waves-light deep-orange" href="/deposit"><i class="material-icons">account_balance</i></a>
         </p>
       </div>
     </div>
   </div>
-  <div class="card-reveal green lighten-1">
+  <div class="card-reveal amber">
       <span class="card-title grey-text text-darken-1">Schedule<i class="material-icons right">close</i></span>
       <p>Classes are held Every Tuesday and Thursday, Morning Class: 9:15 AM to 11:45 PM, Afternoon Class: 12:30 PM to 3:00 PM</p>
       <p>Monthly tuition is $65.00, to reserve a students spot a 1 time materials fee/deposit of $50.00 is also required.</p>
@@ -47,7 +48,7 @@
 </div>
 
 
-<div class="card green lighten-1">
+<div class="card amber accent-2">
   <div class="row">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="images/github1.png">
@@ -60,32 +61,34 @@
       </p>
     </div>
     <div class="col s3">
-        <p><%= link_to "Payments", deposit_index_path %></p>
-        <p><a class="btn-floating btn-large waves-effect waves-light purple" href="/deposit"><i class="material-icons">account_balance</i></a>
+        <p><%= link_to "Schedules", schedule_path %></p>
+        <p><a class="btn-floating btn-large waves-effect waves-light blue accent-2" href="/schedule"><i class="material-icons">schedule</i></a>
         </p>
       </div>
     <div class="col s3">
       <p>Portfolios</p>
-      <p><a class="btn-floating btn-large waves-effect waves-light green" href="/portfolios"><i class="material-icons">brush</i></a>
+      <p><a class="btn-floating btn-large waves-effect waves-light amber darken-3" href="/portfolios"><i class="material-icons">brush</i></a>
       </p>
     </div>
     </div>
   </div>
-  <div class="card-reveal green lighten-3">
-      <span class="card-title grey-text text-darken-4">Day to Day & Curriculum<i class="material-icons right">close</i></span>
+  <div class="card-reveal amber">
+      <span class="card-title grey-text text-darken-4">Yearly theme: <i class="material-icons right">close</i></span>
+      <p>This year our theme is Dr. Seuss and we will have an amazing year!</p>
       <p>Here is some more information about the teacher and her contact info.</p>
       <%= link_to "About the teacher", about_path %> | <%= link_to "Contact The Learning Center", contact_path %>
-      <p>Yearly theme: This year our theme is Dr. Seuss and we will have an amazing year!</p>
-    
-    <br>
-    
+      
+<h5>Educational focus points, Rules, Healthy Snacks and Parent Helpers</h5>
+<h6>Ways we learn</h6>
 <p>Literacy: Literacy is very important for preschoolers! Instead of “learning how to read” we lay the foundation for learning how to read by learning letters, sounds, rhymes, songs, playing games, practicing coordination and reading books together. You can also promote this at home by reading to your child every day! I will send home a reading log and if you read with your child each day, fill out the log and bring it back, your child will get a book each month!</p>
 <p>Environmental print: Some months we will have an environmental print item that I will ask you to send with your child. We will do songs or activities with each one. Watch the calendar for these!</p>
 <p>Play: Young children learn through play! Play is a very important part of childhood and preschool is the last opportunity your child will have to play for an adequate time in school. It is a very important part of my curriculum. </p>
 <p>Discipline: Each child is expected to follow the basic rules of preschool: being a friend, listening, sharing, cleaning up and following directions. We practice these a lot in preschool. I use positive discipline strategies by setting high expectation paired with high levels of praise. If a child’s behavior is an excessive problem in the classroom, I will discuss the issues with parents and if the problem continues, the child will be dismissed from preschool.</p>
+<h6>Rules and expectations</h6>
 <p>Backpacks: Your child works hard on art projects, etc. in class and these will not fit into a “mini” backpack. Please send your child with a regular backpack or an open top bag for their papers.</p>
 <p>Dress: Preschool can be kind of messy, so I recommend that you NOT send your child in their best clothes. We paint and do all sorts of projects, most of which use washable materials, but some do not. We try to stay clean but, sometimes, stains just happen!</p>
 <p>Illness: Because this is probably your child’s first experience outside of home, you may find that they get sick more easily. I do everything I possibly can to prevent this, but the fact is that kids spread germs and illness. We wash hands and Clorox wipe surfaces often. If your child is ill, please keep them home. Help them get used to washing their hands often and coughing or sneezing into their sleeve. If they contract a contagious disease such as the chicken pox or strep throat, please let me know so I can inform other parents.</p>
+<h6>Parent Participation!</h6>
 <p>Class Help: I offer tuition credit for class helpers! If you come once, you may take off $5, if you come in twice, you may take off $10 from the next month’s tuition. You may stay the whole preschool time, or you may come for the last half of preschool (This is 10:30-11:45 or 1:45-3:00). And my door is always open!</p>
 <p>Field trips: We take several field trips during the year and I must have parent helpers/drivers. There will be a sign-up sheet at the front door for field trip helpers before each trip. Some field trips are free, others will be $1- 3.00 and I make up the difference.</p>
 <p>Snacks: You will be asked to help out with snack regularly throughout the year. Children love when it is their turn. This does not have to be fancy. Simple is better. Some ideas might be: apple slices, crackers & cheese, pretzels, granola bars, frozen Gogurt, etc. Please avoid cupcakes or really sugary snacks. A drink is optional but not necessary as we always have water!</p>

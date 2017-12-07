@@ -1,40 +1,39 @@
 class DepositController < ApplicationController
+    before_action :amount_to_be_charged
+    before_action :set_description
+    before_action :authenticate_user!
+    
   def new
-end
+  end
+
+  def index
+  end
 
 def create
-  @amount = params[:amount]
+    customer = StripeTool.create_customer(email: params[:stripeEmail], 
+                                          stripe_token: params[:stripeToken])
 
-  @amount = @amount.gsub('$', '').gsub(',', '')
+    charge = StripeTool.create_charge(customer_id: customer.id, 
+                                      amount: @amount,
+                                      description: @description)
 
-  begin
-    @amount = Float(@amount).round(2)
-  rescue
-    flash[:error] = 'Charge not completed. Please enter a valid amount in USD ($).'
-    redirect_to new_deposit_path
-    return
-  end
 
-  @amount = (@amount * 100).to_i # Must be an integer!
-
-  if @amount < 500
-    flash[:error] = 'Deposit not completed. Donation amount must be at least $5.'
-    redirect_to new_deposit_path
-    return
-  end
-
-  Stripe::Charge.create(
-    :amount => @amount,
-    :currency => 'usd',
-    :source => params[:stripeToken],
-    :description => 'Custom donation'
-  )
-  redirect_to thank_you_path
-  rescue Stripe::CardError => e
+        redirect_to thank_you_path
+    rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to new_deposit_path
-  end
+    redirect_to deposit_index_path
+    end
 
-  def thank_you
-  end
+    def thanks
+    end
+
+    private
+
+    def amount_to_be_charged
+        @amount = 5000
+    end
+
+    def set_description
+        @description = "Learning Center Material Fee"
+    end
 end
