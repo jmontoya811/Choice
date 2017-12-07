@@ -6,6 +6,6 @@ class Post < ApplicationRecord
     friendly_id :title, use:  :slugged 
 
     validates_presence_of :title, :name, :age, :body, :class_desired, :gender
-
+    belongs_to :user
     belongs_to :class_roster
 end
