@@ -21,6 +21,7 @@
  *= require jquery-ui
  */
 
+
 .navbar-custom {
     float: right;
 }
@@ -30,7 +31,7 @@
     direction: ltr;}
 
 a.brand-logo:hover {
-   background-color: rgb(8, 223, 140);
+   background-color: rgb(244, 255, 89);
 }
 
 
@@ -63,6 +64,7 @@ nav .brand-logo {
 body {
     color: #666;
     background-color: #e15d11;
+    font-family: Montserrat, Source Sans Pro, sans-serif;
 }
 
 .row {

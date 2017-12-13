@@ -15,7 +15,8 @@
   </thead>
 
   <tbody>
-    <% @class_rosters.each do |class_roster| %>
+    <% @class_rosters.each do |class_roster| if logged_in?(:admin) %>
+    <% end %>
       <tr>
         <td><%= class_roster.title %></td>
         <td><%= link_to class_roster.status, toggle_status_class_roster_path(class_roster) %></td>
@@ -30,6 +31,67 @@
       
     <% end %>
   </tbody>
+</table>
+
+<h1>Morning Students</h1>
+<table>
+<thead>
+    <tr>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Body</th>
+      <th>Class Desired</th>
+      <th>Timeslot</th>
+      <th>Status</th>
+      <th colspan="7"></th>
+    </tr>
+  </thead>
+
+<tbody>
+<% @mstudents.each do |post| if logged_in?(:admin) %>
+    <% end %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.name %></td>
+        <td><%= post.age %></td>
+        <td><%= post.body %></td>
+        <td><%= post.class_desired %></td>
+        <td><%= post.timeslot %></td>
+        <td><%= post.status %></td>
+        <% end %>
+</tbody>
+
+</table>
+<h1>Afternoon Students</h1>
+<table>
+<thead>
+    <tr>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Body</th>
+      <th>Class Desired</th>
+      <th>Timeslot</th>
+      <th>Status</th>
+      <th colspan="7"></th>
+    </tr>
+  </thead>
+
+<tbody>
+<% @astudents.each do |post| if logged_in?(:admin) %>
+    <% end %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.name %></td>
+        <td><%= post.age %></td>
+        <td><%= post.body %></td>
+        <td><%= post.class_desired %></td>
+        <td><%= post.timeslot %></td>
+        <td><%= post.status %></td>
+        <% end %>
+</tbody>
+
 </table>
 <hr>
 

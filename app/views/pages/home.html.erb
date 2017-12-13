@@ -1,9 +1,9 @@
-<h2>Hi, <%= current_user.first_name %>, Welcome to The Learning Center!</h2>
+<blockquote><h2>Hi, <%= current_user.first_name %>, Welcome to The Learning Center!</h2></blockquote>
 <hr>
 <%= link_to "CHOICE | Registration", posts_path %>
-<br>
+|
 <%= link_to "CHOICE | Tuition", new_charge_path %>
-<br>
+|
 <%= link_to "CHOICE | Class of 2018", class_rosters_path %>
 <%= render 'shared/home_card'%>
 <hr>

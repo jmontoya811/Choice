@@ -5,8 +5,21 @@ class ClassRostersController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, admin: :all
 
   # GET /class_rosters
+   
+    # @aclass_rosters = ClassRoster.status
+    
+    # @astudents = Post.approved.timeslots{"afternoon"}
+
   def index
+    if logged_in?(:admin)
     @class_rosters = ClassRoster.all
+    @mstudents = Post.morning.approved
+    @astudents = Post.afternoon.approved
+    @posts = Post.all
+  else 
+    @class_rosters = ClassRoster.Active
+  end
+    @page_title = "TLC Active Classes"
   end
 
   # GET /class_rosters/1

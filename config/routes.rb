@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show]
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+resources 'users' do
+  resources 'posts'
+end 
 
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
@@ -31,8 +34,6 @@ Rails.application.routes.draw do
   get 'thanks', to: 'charges#thanks', as: 'thanks'
 
   resources :deposit, only: [:new, :create]
-  
   get 'thank_you', to: 'deposit#thank_you', as: 'thank_you'
-
   root to: 'pages#home'
 end
