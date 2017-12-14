@@ -6,9 +6,6 @@
 @import "jquery-ui";
 @import "materialize";
 
- 
-
-
 .navbar-custom {
     float: right;
 }
@@ -67,6 +64,8 @@ body {
   background-clip: padding-box;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
+}
+
   .determinate {
     position: absolute;
     background-color: inherit;
