@@ -25,8 +25,8 @@ module Choice
       g.stylesheets     true
       g.javascripts     true
     end
+    config.assets.initialize_on_precompile = false
   end
 end
 
-config.assets.initialize_on_precompile = false
 
