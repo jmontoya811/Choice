@@ -1,0 +1,68 @@
+<% if logged_in?(:admin) %>
+<div class="card amber accent-2">
+  <div class="row">
+
+        <h1>Morning Students</h1>
+        <table>
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Body</th>
+            <th>Class Desired</th>
+            <th>Timeslot</th>
+            <th>Status</th>
+            <th colspan="7"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @mstudents.each do |post| if logged_in?(:admin) %>
+            <% end %>
+            <tr>
+                <td><%= post.title %></td>
+                <td><%= post.name %></td>
+                <td><%= post.age %></td>
+                <td><%= post.body %></td>
+                <td><%= post.class_desired %></td>
+                <td><%= post.timeslot %></td>
+                <td><%= post.status %></td>
+                <% end %>
+        </tbody>
+
+        </table>
+        <h1>Afternoon Students</h1>
+        <table>
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Body</th>
+            <th>Class Desired</th>
+            <th>Timeslot</th>
+            <th>Status</th>
+            <th colspan="7"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @astudents.each do |post| if logged_in?(:admin) %>
+            <% end %>
+            <tr>
+                <td><%= post.title %></td>
+                <td><%= post.name %></td>
+                <td><%= post.age %></td>
+                <td><%= post.body %></td>
+                <td><%= post.class_desired %></td>
+                <td><%= post.timeslot %></td>
+                <td><%= post.status %></td>
+                <% end %>
+        </tbody>
+
+        </table>
+
+  </div>
+</div>
+<% end %>

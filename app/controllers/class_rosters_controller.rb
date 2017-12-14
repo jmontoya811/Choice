@@ -16,7 +16,7 @@ class ClassRostersController < ApplicationController
     @mstudents = Post.morning.approved
     @astudents = Post.afternoon.approved
     @posts = Post.all
-  else 
+  else logged_in?(:user)
     @class_rosters = ClassRoster.Active
   end
     @page_title = "TLC Active Classes"

@@ -1,0 +1,17 @@
+<div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating red" name="portfolio" id="edit_class_id" href="/portfolios"><i class="material-icons">clear_all</i></a></li>
+              
+             <li><%= link_to(edit_portfolio_path(@portfolio_item), :id => :portfolio, class: "btn-floating yellow darken-1") do %>
+              <i class='material-icons'>edit</i><% end %></li> 
+            
+              <li><%= link_to(@portfolio_item, :method=>:delete, class: "btn-floating green", data: { confirm: 'Are you sure?' }) do %>
+              <i class='material-icons'>delete</i><% end %>
+                </li>
+                
+              <li><a class="btn-floating blue" href="/portfolios/new"><i class="material-icons">publish</i></a></li>
+            </ul>
+        </div>

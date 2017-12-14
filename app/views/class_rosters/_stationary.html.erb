@@ -4,7 +4,10 @@
             </a>
             <ul>
               <li><a class="btn-floating red" name="class_roster[edit_class_roster]" id="edit_class_id" href="/class_rosters"><i class="material-icons">clear_all</i></a></li>
-              <li><a class="btn-floating yellow darken-1" href="/edit"><i class="material-icons">format_quote</i></a></li>
+              
+             <li><%= link_to(edit_class_roster_path(@class_roster), :id => :class_roster, class: "btn-floating yellow darken-1") do %>
+              <i class='material-icons'>edit</i><% end %></li> 
+            
               <li><%= link_to(@class_roster, :method=>:delete, class: "btn-floating green", data: { confirm: 'Are you sure?' }) do %>
               <i class='material-icons'>delete</i><% end %>
                 </li>

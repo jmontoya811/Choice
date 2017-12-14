@@ -1,32 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag "_header.png" %>
+
 <h1>Blogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-        <td><%= link_to(edit_blog_path(blog), :id => :blog, class: "btn-floating yellow darken-1") do %>
-              <i class='material-icons'>edit</i><% end %><td>
-        <td><%= link_to(blog_path(blog), :id => :blog, class: "btn-floating green") do %><i class="material-icons">assignment_return</i><% end %><td>
-
-  <td><%= link_to(blog, :method=>:delete, class: "btn-floating red", data: { confirm: 'Are you sure?' }) do %>
-              <i class='material-icons'>delete</i><% end %><td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'blogcard' %>
 
 <br>
 

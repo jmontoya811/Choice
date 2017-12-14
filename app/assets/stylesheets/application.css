@@ -63,7 +63,7 @@ nav .brand-logo {
 
 body {
     color: #666;
-    background-color: #e15d11;
+    background-color: #00e9fa;
     font-family: Montserrat, Source Sans Pro, sans-serif;
 }
 
@@ -91,4 +91,8 @@ body {
 
 a.carousel-item .active {
     background-color: none;
+}
+
+.slider {
+    color: green;
 }
