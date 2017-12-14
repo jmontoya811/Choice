@@ -5,6 +5,7 @@
 */
 @import "jquery-ui";
 @import "materialize";
+@import "gritter";
 
 .navbar-custom {
     float: right;

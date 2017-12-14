@@ -1,14 +1,8 @@
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <% post.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "TLC Posts") %>
+    <% end %>
   <% end %>
 
   <div class="field">
@@ -27,24 +21,25 @@
   </div>
 
 
-<p>
+<div class="field">
     <input name="post[class_desired]" class="with-gap" type="radio" id="class_desired_id" value="afternoon">
     <label for="class_desired_id" value="afternoon">Afternoon</label>
-</p>
+</div>
 
-<p>
+<div class="field">
     <input name="post[class_desired]" class="with-gap" type="radio" id="class_desired_id_green" value="morning">
     <label for="class_desired_id_green" value="morning">Morning</label>
-</p>
+</div>
 
-  <p>
-      <input name="gender" class="with-gap" type="radio" id="gender_id_red" />
-      <label for="gender_id_red" value="0">Male</label>
-    </p>
-    <p>
-      <input name="gender" class="with-gap" type="radio" id="gender_id_yellow" />
-      <label for="gender_id_yellow" value="1">Female</label>
-    </p>
+  <div class="field">
+      <input name="post[gender]" class="with-gap" type="radio" id="gender_id" value="male">
+      <label for="gender_id" value="male">Male</label>
+    </div>
+
+    <div class="field">
+      <input name="post[gender]" class="with-gap" type="radio" id="gender_id_yellow" value="female">
+      <label for="gender_id_yellow" value="female">Female</label>
+    </div>
 
   <div class="field">
     <%= form.label :class_desired_because %>

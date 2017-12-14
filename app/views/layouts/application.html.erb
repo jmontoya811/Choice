@@ -17,17 +17,16 @@
   </head>
 
   <body>
-  
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
     
     <%= render 'shared/nav' %>
-    
+    <%= render 'shared/alerts' %>
     <%= yield %>
     <% if session[:source] %>
      <p>Thanks for visiting from <%= session[:source] %></p>
      <% end %>
 <%= render 'shared/footer' %>
+
+
 
   </body>
 </html>

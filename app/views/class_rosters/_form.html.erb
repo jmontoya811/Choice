@@ -1,14 +1,8 @@
 <%= form_with(model: class_roster, local: true) do |form| %>
   <% if class_roster.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(class_roster.errors.count, "error") %> prohibited this class_roster from being saved:</h2>
-
-      <ul>
-      <% class_roster.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <% class_roster.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "TLC Class Roster") %>
+    <% end %>
   <% end %>
 
   <div class="field">

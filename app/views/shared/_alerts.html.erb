@@ -1,0 +1,7 @@
+<% if flash[:alert] %>
+    <%= js add_gritter(flash[:alert], title: "TLC Preschool", image: "success", time: 1000) %>
+<% elsif flash[:error] %>
+    <%= js add_gritter(flash[:error], title: "TLC Preschool", image: "error", time: 1000) %>
+<% else %>
+        <%= js add_gritter(flash[:notice], title: "TLC Preschool", image: "success", time: 1000) %>
+<% end %>
