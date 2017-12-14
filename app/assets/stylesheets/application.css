@@ -1,9 +1,7 @@
 /*
 *= require_tree .
 *= require_self
-*= require jquery-ui
 */
-@import "jquery-ui";
 @import "materialize";
 @import "gritter";
 
