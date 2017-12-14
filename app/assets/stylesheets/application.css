@@ -88,3 +88,7 @@ body {
     background-color: $progress-bar-color;
     transition: width 3s linear;
   }
+
+a.carousel-item .active {
+    background-color: none;
+}
