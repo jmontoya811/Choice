@@ -18,7 +18,3 @@
 //= require rails-ujs
 //= require_tree .
 //= require materialize
-
-// Bower packages
-//= require d3
-//= require underscore
