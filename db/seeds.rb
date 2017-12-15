@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create!(name:"Test Choice",
- email:'test@choice.com',
+ email:'admin@choice.com',
  password:"asdf123", 
  password_confirmation:"asdf123",
  roles: "admin"
@@ -84,12 +84,12 @@ ClassRoster.create!(title: "Morning Class",
 subtitle: "Schedule: 9:15-11:45",
 count: "12",
 description: "Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith",
-status: "Morning")
+status: "Active")
 
 ClassRoster.create!(title: "Afternoon Class",
 subtitle: "Schedule: 12:30-3:00",
 count: "12",
 description: "Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith Johnny, Carsons Sally, Smith",
-status: "Afternoon")
+status: "Active")
 
 puts "2 classes created morn/aft"
