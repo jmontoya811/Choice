@@ -8,7 +8,7 @@ class BlogsController < ApplicationController
     if logged_in?(:admin)
     @blogs = Blog.all
   else
-    @blogs = Blog.published(params[:id])
+    @blogs = Blog.published
   end
     @page_title = "The Learning Center Blog"
   end
