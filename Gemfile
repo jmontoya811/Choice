@@ -47,7 +47,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Window does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'petergate', '~> 1.8'
 gem 'devise', '~> 4.3'
@@ -59,3 +59,5 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'materialize-sass', '~> 0.100.2'
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'gritter', '~> 1.2'
+gem 'administrate', '~> 0.8.1'
+gem 'bourbon', '~> 4.3', '>= 4.3.4'

@@ -1,4 +1,9 @@
 module ApplicationHelper
+
+	def admin_types
+		['AdminUser']
+	end
+
 	def login_helper
     if current_user.is_a?(GuestUser)
       (link_to "Register", new_user_registration_path) +
